@@ -1,0 +1,14 @@
+<h1>{{subj.id}} - {{subj.name}}</h1>
+<p>หน่วยกิต: {{subj.credit}} | ผู้สอน: {{subj.lecturer}}</p>
+<p>
+  {% if subj.capacity != -1 %}
+    จำนวนรับสูงสุด: {{subj.capacity}} | ลงแล้ว: {{subj.enrolled}}
+  {% else %}
+    ไม่จำกัดจำนวนผู้ลงทะเบียน
+  {% endif %}
+</p>
+<p>วิชาบังคับก่อน: {{subj.prereq_id or 'ไม่มี'}}</p>
+<form method="post" action="/enroll/{{subj.id}}">
+  <button type="submit">ลงทะเบียนวิชานี้</button>
+</form>
+<p><a href="/register">← กลับหน้าลงทะเบียน</a></p>

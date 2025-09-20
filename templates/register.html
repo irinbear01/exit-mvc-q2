@@ -1,0 +1,17 @@
+<h1>หน้าลงทะเบียนเรียน</h1>
+<p>สวัสดี <b>{{user.id}}</b> | <a href="/me">โปรไฟล์</a> | <a href="/logout">ออกจากระบบ</a></p>
+<ul>
+  {% for s in subjects %}
+    <li>
+      <a href="/subjects/{{s.id}}">{{s.id}} - {{s.name}}</a>
+      {% if s.capacity != -1 %}
+        (รับสูงสุด: {{s.capacity}}, ลงแล้ว: {{s.enrolled}})
+      {% else %}
+        (ไม่จำกัดจำนวน)
+      {% endif %}
+      <form method="post" action="/enroll/{{s.id}}" style="display:inline">
+        <button type="submit">ลงทะเบียน</button>
+      </form>
+    </li>
+  {% endfor %}
+</ul>

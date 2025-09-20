@@ -1,0 +1,8 @@
+<h1>โปรไฟล์นักเรียน: {{user.id}}</h1>
+<p><a href="/register">ไปหน้าลงทะเบียน</a> | <a href="/logout">ออกจากระบบ</a></p>
+<h2>รายวิชาที่ลงแล้ว</h2>
+<ul>
+  {% for subj, grade in rows %}
+    <li>{{subj.id}} - {{subj.name}} (หน่วยกิต {{subj.credit}}) เกรด: {{grade or '-'}}</li>
+  {% endfor %}
+</ul>
