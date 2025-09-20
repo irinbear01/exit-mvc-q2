@@ -1,23 +1,25 @@
 # exit-mvc-q2
-เลือกทำข้อที่ 2
+**เลือกทำข้อที่ 2**
 
 ## รายละเอียดโปรเจกต์
-ภาษาและเทคโนโลยีที่ใช้
-Python 3 + Flask
-SQLite (ฐานข้อมูลจำลอง)
-Jinja2 Template (View)
-โครงสร้างแบบ MVC
-Model: จัดการ Student, Subject, Enrollment
-Controller: ควบคุมการ Login, Register, Enroll, Profile
-View: หน้า /login, /register, /subjects/<id>, /me
+**ภาษาและเทคโนโลยีที่ใช้**
+- Python 3 + Flask  
+- SQLite (ฐานข้อมูลจำลอง)  
+- Jinja2 Template (View)  
+
+**โครงสร้างแบบ MVC**
+- **Model**: จัดการ Student, Subject, Enrollment  
+- **Controller**: ควบคุมการ Login, Register, Enroll, Profile  
+- **View**: หน้า `/login`, `/register`, `/subjects/<id>`, `/me`  
 
 ## วิธีรันระบบ
-1. สร้าง virtual environment และติดตั้ง dependency
-python3 -m venv .venv
-source .venv/bin/activate   # macOS/Linux
-.venv\Scripts\activate    # Windows
+1. สร้าง virtual environment และติดตั้ง dependency  
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate   # macOS/Linux
+   .venv\Scripts\activate      # Windows
 
-pip install Flask Flask-SQLAlchemy Flask-Login
+   pip install Flask Flask-SQLAlchemy Flask-Login
 2. python seed.py
 3. python app.py
 4. เปิดเว็บเบราว์เซอร์ไปที่ http://127.0.0.1:5000/login
